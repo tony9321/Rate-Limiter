@@ -1,7 +1,16 @@
-# Thread Safe Sliding Window Rate Limiter (C++)
+# Thread Safe Sliding Window Rate Limiter with modern C++
 
 A simple **multithreaded rate limiter** implemented using the **sliding window algorithm**.  
-This design demonstrates a typical backend rate-limiting system suitable for **single-node services** and commonly discussed in **system design interviews**.
+This design demonstrates a typical backend rate limiting system suitable for **singl -node services** and commonly discussed in **system design interviews**.
+
+Approach: per client sliding window
+    Each client has a bucket that stores recent request timestamps.
+    When a new request arrives, the limiter:
+        Removes timestamps outside the window
+        Checks if request count ≥ limit
+        Rejects or allows
+        Records timestamp if allowed
+
 
 ---
 
