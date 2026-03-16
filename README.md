@@ -114,3 +114,10 @@ struct Bucket {
     int window;
     std::deque<long long> timestamps;
 };
+```
+
+potential optimization:
+    TTL clean up
+    LRU eviction
+    Token butkcet
+    redis for distributed cache
