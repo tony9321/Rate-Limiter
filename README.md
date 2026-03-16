@@ -1,4 +1,4 @@
-# Thread-Safe Sliding Window Rate Limiter (C++)
+# Thread Safe Sliding Window Rate Limiter (C++)
 
 A simple **multithreaded rate limiter** implemented using the **sliding window algorithm**.  
 This design demonstrates a typical backend rate-limiting system suitable for **single-node services** and commonly discussed in **system design interviews**.
